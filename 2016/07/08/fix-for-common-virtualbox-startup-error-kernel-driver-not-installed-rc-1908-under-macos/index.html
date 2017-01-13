@@ -1,0 +1,226 @@
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <title>Fix for common VirtualBox startup error- Kernel driver not installed (rc=-1908) under macOS</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="http://localhost:2368/assets/images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../../assets/css/font-awesome.min.css?v=256f62e38f">
+    <link rel="stylesheet" href="../../../../assets/css/screen.css?v=256f62e38f">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Story of a Maverick">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Fix for common VirtualBox startup error- Kernel driver not installed (rc=-1908) under macOS">
+    <meta property="og:description" content="If you are using Oracle VirtualBox under macOS and recently upgraded to one version of macOS to another; you may be familiar with a common error during VirtualBox startup -- 'kernel driver not installed (rc=-1908)'. Can't understand? Well, this error may look like below image: This error happening">
+    <meta property="og:url" content="http://localhost:2368/2016/07/08/fix-for-common-virtualbox-startup-error-kernel-driver-not-installed-rc-1908-under-macos/">
+    <meta property="article:published_time" content="2016-07-08T10:14:24.000Z">
+    <meta property="article:modified_time" content="2016-10-10T07:00:36.000Z">
+    <meta property="article:tag" content="macOS">
+    <meta property="article:tag" content="VirtualBox">
+    <meta property="article:tag" content="Tutorial">
+    <meta property="article:tag" content="Kernel">
+    <meta property="article:tag" content="Fix">
+    <meta property="article:tag" content="Error">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fix for common VirtualBox startup error- Kernel driver not installed (rc=-1908) under macOS">
+    <meta name="twitter:description" content="If you are using Oracle VirtualBox under macOS and recently upgraded to one version of macOS to another; you may be familiar with a common error during VirtualBox startup -- 'kernel driver not installed (rc=-1908)'. Can't understand? Well, this error may look like below image: This error happening">
+    <meta name="twitter:url" content="http://localhost:2368/2016/07/08/fix-for-common-virtualbox-startup-error-kernel-driver-not-installed-rc-1908-under-macos/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Abhi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="macOS, VirtualBox, Tutorial, Kernel, Fix, Error">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Story of a Maverick",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Abhi",
+        "url": "http://localhost:2368/author/abhi/",
+        "sameAs": [
+            "https://abhiaditya.github.io/"
+        ],
+        "description": "Blogger, Traveler, Photographer"
+    },
+    "headline": "Fix for common VirtualBox startup error- Kernel driver not installed (rc&#x3D;-1908) under macOS",
+    "url": "http://localhost:2368/2016/07/08/fix-for-common-virtualbox-startup-error-kernel-driver-not-installed-rc-1908-under-macos/",
+    "datePublished": "2016-07-08T10:14:24.000Z",
+    "dateModified": "2016-10-10T07:00:36.000Z",
+    "keywords": "macOS, VirtualBox, Tutorial, Kernel, Fix, Error",
+    "description": "If you are using Oracle VirtualBox under macOS and recently upgraded to one version of macOS to another; you may be familiar with a common error during VirtualBox startup -- &#x27;kernel driver not installed (rc&#x3D;-1908)&#x27;. Can&#x27;t understand? Well, this error may look like below image: This error happening",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Story of a Maverick" href="../../../../rss/index.html">
+    <meta name="google-site-verification" content="hAdwsUL7Qc80rd7XahqTA3anAn8VWgoH326S96o2Aho">
+  </head>
+  <body class="post-template tag-macos tag-virtualbox tag-tutorial tag-kernel tag-fix tag-error">
+
+    
+
+<header class="masthead" style="background-image: url(../../../../content/images/2016/10/cover.jpg)">
+    <div class="header-wrapper">
+	    
+	    <div class="title">
+	    	<a href="https://abhiaditya.github.io/">
+	        	<h1>Story of a Maverick</h1>
+	        </a>
+	      	<p>Life, Random thoughts, Photography</p>
+	      	<div class="line"></div>
+	    </div>
+	    <div class="bottom">
+			<ul class="menu">
+				<li><a href="https://feedburner.google.com/fb/a/mailverify?uri=StoryOfAMaverick&amp;loc=en_US"><i class="fa fa-rss"></i></a></li>
+				<li><a href="https://www.instagram.com/thevegabondboy"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="mailto:abhiaditya@icloud.com"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+	    </div>
+  	</div>
+</header>
+
+<section class="container">
+  
+	<article class="post tag-macos tag-virtualbox tag-tutorial tag-kernel tag-fix tag-error single">
+        <header class="header-post">
+        	<span class="meta-post">
+            	<time datetime="08-07-2016">08 Jul 2016</time>  on <a href="../../../../tag/macos/">macOS</a>, <a href="../../../../tag/virtualbox/">VirtualBox</a>, <a href="../../../../tag/tutorial/">Tutorial</a>, <a href="../../../../tag/kernel/">Kernel</a>, <a href="../../../../tag/fix/">Fix</a>, <a href="../../../../tag/error/">Error</a>
+				</span>
+          	<h2 class="title-post">Fix for common VirtualBox startup error- Kernel driver not installed (rc=-1908) under macOS</h2>
+        </header>
+
+        <section class="content-post">
+			<p>If you are using <a href="https://en.wikipedia.org/wiki/VirtualBox">Oracle VirtualBox</a> under macOS and recently upgraded to one version of macOS to another; you may be familiar with a common error during VirtualBox startup -- 'kernel driver not installed (rc=-1908)'. Can't understand? Well, this error may look like below image:</p>
+
+<p><img src="https://cl.ly/gf6a/Screen%20Shot%202016-07-08%20at%202.50.47%20PM.png" alt=""></p>
+
+<p>This error happening to me too since I keep upgrading macOS version 10.9.x to 10.10.x and so on (current version 10.11.6, I don't do fresh installation). Even re-install/uninstall of VirtualBox wasn't solving the issue permanently. Yes, most of the people do that! They keep upgrading VirtualBox to latest version or keep doing re-install thingy; which actually not helpful sometimes. But I found a solution to fix the issue and applying that since then. Now I want to share the trick with you guys also; it's kind of late to share this trick, but better late than never. Don't need to panic if you see something like above image, just relax and open TextEdit (SublimeText, Atom,  etc. will be fine too, I personally use Visual Studio Code). Then write following texts into that:  </p>
+
+<pre><code class="bash">
+#!/bin/bash
+
+unload() 
+{
+kextstat | grep "org.virtualbox.kext.VBoxUSB" &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sudo kextunload -b org.virtualbox.kext.VBoxUSB
+kextstat | grep "org.virtualbox.kext.VBoxNetFlt" &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sudo kextunload -b org.virtualbox.kext.VBoxNetFlt
+kextstat | grep "org.virtualbox.kext.VBoxNetAdp" &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sudo kextunload -b org.virtualbox.kext.VBoxNetAdp
+kextstat | grep "org.virtualbox.kext.VBoxDrv" &gt; /dev/null 2&gt;&amp;1 &amp;&amp; sudo kextunload -b org.virtualbox.kext.VBoxDrv
+}
+
+load()
+{
+  sudo kextload "/Library/Application Support/VirtualBox/VBoxDrv.kext" -r "/Library/Application Support/VirtualBox/"
+  sudo kextload "/Library/Application Support/VirtualBox/VBoxNetFlt.kext" -r "/Library/Application Support/VirtualBox/"
+  sudo kextload "/Library/Application Support/VirtualBox/VBoxNetAdp.kext" -r "/Library/Application Support/VirtualBox/"
+  sudo kextload "/Library/Application Support/VirtualBox/VBoxUSB.kext" -r "/Library/Application Support/VirtualBox/"
+}
+
+case "$1" in
+        unload|remove)
+                unload
+                ;;
+        load)
+                load
+                ;;
+        *|reload)
+                unload
+                load
+                ;;
+esac
+</code></pre>
+
+<p><br> <br>
+If you understand shell script then you can understand the meaning of those texts. If you can't, then don't bother reading. Believe me, those texts not going to kill your machine. Now save the file with .sh extension to any location of your hard disk. why .sh extension? Because it's a shell script. <br>
+Now need to make this script executable with following command:<br> <br>
+<code>chmod +x scriptname.sh</code> 
+<br> <br>
+Here, 'scriptname' obviously means your given name of that script. You need to run the command from the directory you've save the script file. Now if you found mentioned VirtualBox error again then simply go to that directory and run following command:<br> <br>
+<code>./scriptname.sh</code>
+<br> <br>
+VirtualBox will start smoothly now without any further error. Simple as that! Hope it will save your precious time you decided to waste by re-installing or upgrading VirtualBox.</p>
+		</section>
+
+		<footer class="footer-post">
+
+			<section class="author-post">
+
+				<div class="bio">
+					<span>Written by</span>
+					<h4 class="author-name">
+						<a href="../../../../author/abhi/">Abhi</a>
+					</h4>
+						<p>Blogger, Traveler, Photographer</p>
+				</div>
+			</section>
+		</footer>
+
+		<section class="comments-post">
+			
+			<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//adityaabhi.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+		</section>
+
+  	</article>
+</section>
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script> 
+      var max_pages = parseInt('');
+    </script>
+    <script src="../../../../assets/js/main.js?v=256f62e38f"></script>
+    <script>
+    //Google Analytics
+
+    //Code Highlighter
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+    <script id="dsq-count-scr" src="http://adityaabhi.disqus.com/count.js" async></script>
+    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58063575b6fa2872"></script> 
+  </body>

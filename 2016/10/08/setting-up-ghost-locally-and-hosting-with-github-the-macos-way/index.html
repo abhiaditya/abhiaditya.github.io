@@ -1,0 +1,223 @@
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <title>Setting up Ghost locally and hosting with GitHub - the macOS way</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="http://localhost:2368/assets/images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../../assets/css/font-awesome.min.css?v=256f62e38f">
+    <link rel="stylesheet" href="../../../../assets/css/screen.css?v=256f62e38f">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Story of a Maverick">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Setting up Ghost locally and hosting with GitHub - the macOS way">
+    <meta property="og:description" content="I guess most of you heard about Ghost - not the spirit kind, a blogging platform. Beautiful, feature rich and easy to setup. In this tutorial I will try to show how to setup Ghost blog in macOS (obviously local installation) and host that blog with GitHub pages, a static">
+    <meta property="og:url" content="http://localhost:2368/2016/10/08/setting-up-ghost-locally-and-hosting-with-github-the-macos-way/">
+    <meta property="article:published_time" content="2016-10-08T08:01:46.000Z">
+    <meta property="article:modified_time" content="2016-10-08T08:18:23.000Z">
+    <meta property="article:tag" content="Tutorial">
+    <meta property="article:tag" content="macOS">
+    <meta property="article:tag" content="Ghost">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="Web Technology">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Setting up Ghost locally and hosting with GitHub - the macOS way">
+    <meta name="twitter:description" content="I guess most of you heard about Ghost - not the spirit kind, a blogging platform. Beautiful, feature rich and easy to setup. In this tutorial I will try to show how to setup Ghost blog in macOS (obviously local installation) and host that blog with GitHub pages, a static">
+    <meta name="twitter:url" content="http://localhost:2368/2016/10/08/setting-up-ghost-locally-and-hosting-with-github-the-macos-way/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Abhi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Tutorial, macOS, Ghost, GitHub, Web Technology">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Story of a Maverick",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Abhi",
+        "url": "http://localhost:2368/author/abhi/",
+        "sameAs": [
+            "https://abhiaditya.github.io/"
+        ],
+        "description": "Blogger, Traveler, Photographer"
+    },
+    "headline": "Setting up Ghost locally and hosting with GitHub - the macOS way",
+    "url": "http://localhost:2368/2016/10/08/setting-up-ghost-locally-and-hosting-with-github-the-macos-way/",
+    "datePublished": "2016-10-08T08:01:46.000Z",
+    "dateModified": "2016-10-08T08:18:23.000Z",
+    "keywords": "Tutorial, macOS, Ghost, GitHub, Web Technology",
+    "description": "I guess most of you heard about Ghost - not the spirit kind, a blogging platform. Beautiful, feature rich and easy to setup. In this tutorial I will try to show how to setup Ghost blog in macOS (obviously local installation) and host that blog with GitHub pages, a static",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Story of a Maverick" href="../../../../rss/index.html">
+    <meta name="google-site-verification" content="hAdwsUL7Qc80rd7XahqTA3anAn8VWgoH326S96o2Aho">
+  </head>
+  <body class="post-template tag-tutorial tag-macos tag-ghost-tag tag-github tag-web-technology">
+
+    
+
+<header class="masthead" style="background-image: url(../../../../content/images/2016/10/cover.jpg)">
+    <div class="header-wrapper">
+	    
+	    <div class="title">
+	    	<a href="https://abhiaditya.github.io/">
+	        	<h1>Story of a Maverick</h1>
+	        </a>
+	      	<p>Life, Random thoughts, Photography</p>
+	      	<div class="line"></div>
+	    </div>
+	    <div class="bottom">
+			<ul class="menu">
+				<li><a href="https://feedburner.google.com/fb/a/mailverify?uri=StoryOfAMaverick&amp;loc=en_US"><i class="fa fa-rss"></i></a></li>
+				<li><a href="https://www.instagram.com/thevegabondboy"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="mailto:abhiaditya@icloud.com"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+	    </div>
+  	</div>
+</header>
+
+<section class="container">
+  
+	<article class="post tag-tutorial tag-macos tag-ghost-tag tag-github tag-web-technology single">
+        <header class="header-post">
+        	<span class="meta-post">
+            	<time datetime="08-10-2016">08 Oct 2016</time>  on <a href="../../../../tag/tutorial/">Tutorial</a>, <a href="../../../../tag/macos/">macOS</a>, <a href="../../../../tag/ghost-tag/">Ghost</a>, <a href="../../../../tag/github/">GitHub</a>, <a href="../../../../tag/web-technology/">Web Technology</a>
+				</span>
+          	<h2 class="title-post">Setting up Ghost locally and hosting with GitHub - the macOS way</h2>
+        </header>
+
+        <section class="content-post">
+			<p>I guess most of you heard about <a href="https://en.wikipedia.org/wiki/Ghost_(blogging_platform)">Ghost</a> - not the spirit kind, a blogging platform. Beautiful, feature rich and easy to setup. In this tutorial I will try to show how to setup Ghost blog in macOS (obviously local installation) and host that blog with <a href="https://pages.github.com/">GitHub</a> pages, a static website hosting which runs directly from your GitHub repository. Sounds confusing? Well, everything will be clear as water after you finish reading this tutorial. I will not discuss how GitHub works or how to open/manage repository there, because I hope you can do it yourself. Do some search over Google and you will find tons of information related to this. One thing to remember, you need to have: </p>
+
+<p>*Xcode CLI tool<br>
+*<a href="http://brew.sh/">Homebrew package manager</a>,<br>
+*<a href="https://nodejs.org/en/">Node (version 4.x LTS)</a>,<br>
+*wget,<br>
+*python and buster installed in your machine before start working around. Now, lets move ahead...<br></p>
+
+<h5 id="step01settingupghostbr">Step-01 (Setting up Ghost)<br></h5>
+
+<p>First of all, download latest version of Ghost from <a href="https://ghost.org/developers/">here</a> and extract it somewhere in your machine.</p>
+
+<p><code>unzip ghost-xxx.zip -d ghost-blog</code><br></p>
+
+<p>you can change the folder name (ghost-blog) to anything else as your wish. Now enter inside that folder and give following commands:<br> <br>
+<code>npm install --production</code> <br>
+<code>npm start</code><br> <br>
+Ghost instance is running now and you can login into Ghost dashboard by pointing your browser to: <em>localhost:2368/ghost/</em> <br>
+make necessary changes there as per your choice. You can write new post, add static pages, add/remove themes and everything from there.<br></p>
+
+<h5 id="step02hostingwithgithubbr">Step-02 (Hosting with GitHub)<br></h5>
+
+<p>Firstly, create an empty folder anywhere in your machine, you can create it into same place where you put your Ghost blog folder. Suppose you give it a name like- blog-live. Enter inside that empty folder and give following command:<br> <br>
+<code>buster setup</code><br> <br>
+it will ask for your GitHub URL. Input your repository HTTPS clone URL - "<a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a>" <br>
+where 'username' means your GitHub username. Press enter to continue. Now you need to give following command:<br> <br>
+<code>buster generate --domain=http://localhost:2368</code><br> <br>
+you can see a folder called 'static' has been created. Navigate to that folder and give following commands:<br></p>
+
+<p><code>git add --all</code> <br>
+<code>git commit -m "blog is ready or whatever"</code> <br>
+<code>git push --set-upstream origin master</code><br> <br>
+Now you can go to your GitHub pages website and check if your blog is live or not.<br></p>
+
+<h5 id="step03makingchangesbr">Step-03 (Making changes)<br></h5>
+
+<p>Now we are at final stage. It's normal that you will write posts regularly, keep changing themes blah blah. So you need to ensure that changes you have made locally effects your GitHub hosted website. It's a manual process I'm afraid, but not something hard. Whenever you make any changes in your Ghost blog locally, no matter what kind of changes they are, you need to navigate to the folder which you have created in Step-02. Then give following command again:<br> <br>
+<code>buster generate --domain=http://localhost:2368</code><br> <br>
+after that enter inside static folder again and give following commands to push your changes into GitHub:<br> <br>
+<code>git add --all</code> <br>
+<code>git commit -m "some changes"</code> <br>
+<code>git push --set-upstream origin master</code><br></p>
+
+<p>After you have finished making changes in blog and push those in your repository, you can shutdown local Ghost instance. But remember, never ever shutdown Ghost instance before pushing changes. Finally, share your thoughts, ideas, stories, photographs etc. etc. through your new GitHub hosted Ghost blog with friends and family, because sharing is caring.<br></p>
+
+<p>Hope you guys will give this tutorial a try. Happy blogging!</p>
+		</section>
+
+		<footer class="footer-post">
+
+			<section class="author-post">
+
+				<div class="bio">
+					<span>Written by</span>
+					<h4 class="author-name">
+						<a href="../../../../author/abhi/">Abhi</a>
+					</h4>
+						<p>Blogger, Traveler, Photographer</p>
+				</div>
+			</section>
+		</footer>
+
+		<section class="comments-post">
+			
+			<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//adityaabhi.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+		</section>
+
+  	</article>
+</section>
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script> 
+      var max_pages = parseInt('');
+    </script>
+    <script src="../../../../assets/js/main.js?v=256f62e38f"></script>
+    <script>
+    //Google Analytics
+
+    //Code Highlighter
+      $(document).ready(function() {
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+    <script id="dsq-count-scr" src="http://adityaabhi.disqus.com/count.js" async></script>
+    <script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58063575b6fa2872"></script> 
+  </body>
