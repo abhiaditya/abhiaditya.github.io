@@ -539,7 +539,7 @@ img {
    3. General
    ========================================================================== */
 .masthead {
-  background: rgba(130,207,208,0.6) url("http://127.0.0.1:2368/assets/img/header.jpg") repeat-y;
+  background: rgba(130,207,208,0.6) url("http://localhost:2368/assets/img/header.jpg") repeat-y;
   width: 30%;
   max-height: 100%;
   text-align: center;
